@@ -1,14 +1,20 @@
 {
   "name": "blank-node-app",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "src/server.js",
   "repository": "git@github.com:genehynson/blank-node-app.git",
   "author": "Gene Hynson <ghynson@influxdata.com>",
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "build": "babel src/index.js -o dist/index.js --watch",
-    "start": "node dist/index.js"
+    "build": "babel src/server.js -o dist/server.js",
+    "start": "node dist/server.js",
+    "watch": "nodemon dist/server.js --watch src --exec \"yarn build && yarn start\""
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "isomorphic-unfetch": "^3.1.0",
+    "nodemon": "^2.0.15"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.3",
