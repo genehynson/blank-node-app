@@ -1,5 +1,5 @@
 # blank-node-app
-An initialized nodejs app with no functionality
+An initialized nodejs app with no functionality.
 
 Includes babel and jest pre-configured.
 
